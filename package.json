@@ -1,0 +1,26 @@
+{
+  "name": "defensive-css--presentation",
+  "version": "1.0.0",
+  "description": "presentation of \"Defensive CSS\" for interns @codestar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AtaReversei/defensive-css--presentation.git"
+  },
+  "keywords": [
+    "defensive",
+    "css"
+  ],
+  "author": "Ata!",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AtaReversei/defensive-css--presentation/issues"
+  },
+  "homepage": "https://github.com/AtaReversei/defensive-css--presentation#readme",
+  "dependencies": {
+    "parcel": "^2.6.2"
+  }
+}
