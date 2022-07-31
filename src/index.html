@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@500&family=JetBrains+Mono&family=Raleway:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Defensive CSS</title>
+  </head>
+  <body>
+    <main>
+      <section id="section-01">
+        <header>
+          <div class="brief">
+            <h1 class="en title title-1">REMEMBER&nbsp; TO WRAP YOUR FLEX.</h1>
+            <div class="decorative"></div>
+            <span class="en slide-num">01</span>
+            <span class="code presentor">>Ata!</span>
+            <span class="code general-title">DEFENSIVE CSS</span>
+            <p class="fa description">
+              تقریبا همه توسعه‌دهندگان css از flex برای پیاده‌سازی چیدمان‌های
+              متفاوت استفاده می‌کنند. اما موقعی که از flex استفاده می‌کنیم، ممکن
+              است عرض المان پدر برای جاگیری همه المان‌های فرزند در یک خط کم
+              باشد. در این صورت المان‌های فرزند از پدر خود بیرون میفتند. برای
+              جلوگیری از این مشکل می‌توان از
+              <span class="code snippet" dir="ltr">flex-wrap: wrap;</span>
+              استفاده کرد.
+            </p>
+          </div>
+        </header>
+        <div class="content">
+          <h2>استفاده از فلکس</h2>
+          <p>متن</p>
+          <div class="code">
+            <figure>
+              <pre>
+                .box {
+                    display: flex;
+                }
+              </pre>
+            </figure>
+          </div>
+          <div class="code-preview wrong">
+            <figure>
+              <div class="section-01__flex-container--wrong">
+                <div class="section-01__flex-box-1"></div>
+                <div class="section-01__flex-box-2"></div>
+                <div class="section-01__flex-box-3"></div>
+                <div class="section-01__flex-box-4"></div>
+                <div class="section-01__flex-box-5"></div>
+              </div>
+            </figure>
+            <figcaption>باکس ها از پدر بیرون هستند</figcaption>
+          </div>
+
+          <p>متن</p>
+          <div class="code">
+            <figure>
+              <pre>
+                .box {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+              </pre>
+            </figure>
+          </div>
+          <div class="code-preview right">
+            <figure>
+              <div class="section-01__flex-container--right">
+                <div class="section-01__flex-box-1"></div>
+                <div class="section-01__flex-box-2"></div>
+                <div class="section-01__flex-box-3"></div>
+                <div class="section-01__flex-box-4"></div>
+                <div class="section-01__flex-box-5"></div>
+              </div>
+            </figure>
+            <figcaption>باکس ها از پدر بیرون هستند</figcaption>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="./js/script.js"></script>
+</html>
