@@ -1,5 +1,14 @@
+:root {
+  --percentage: 0%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -12,9 +21,15 @@ body {
 }
 
 main {
+  display: flex;
+  flex-direction: row-reverse;
+
+  transform: translateX(var(--percentage));
+  transition: transform 500ms ease-in;
 }
 
 section {
+  flex: 1 0 100%;
 }
 
 h1,
@@ -125,7 +140,7 @@ section header {
   background-repeat: no-repeat;
   background-size: auto;
 
-  padding-block: 10rem;
+  padding-block: 20rem;
 }
 
 .brief {
@@ -219,7 +234,7 @@ section header {
   justify-self: start;
 
   color: #9b56d1;
-  font-size: 2rem;
+  font-size: 2.8rem;
 }
 
 .brief .general-title {
@@ -246,7 +261,7 @@ section header {
   direction: rtl;
   color: #e3bfff;
   font-size: 2.4rem;
-  line-height: 1.3;
+  line-height: 1.5;
 }
 
 .code-preview {
@@ -315,7 +330,7 @@ section header {
 
 #section-02 > header {
   background-image: linear-gradient(
-    to right top,
+    to right bottom,
     #9b56d1,
     #ac57d2,
     #bd58d3,
@@ -334,27 +349,41 @@ section header {
 #section-02 .presentor,
 #section-02 .general-title,
 #section-02 .slide-num {
-  color: #fff;
-  opacity: 0.3;
+  color: #7b41bc;
 }
 
 #section-02 .description,
 #section-02 .title {
-  color: #3232a4;
+  color: #fff;
   position: relative;
+}
+
+#section-02 .snippet {
+  background-color: #6034ae;
+}
+
+#section-02 .brief {
+  background-image: radial-gradient(
+      hsla(240, 59%, 34%, 0.31) 0.85px,
+      transparent 0.85px
+    ),
+    radial-gradient(
+      hsla(240, 59%, 34%, 0.3) 0.85px,
+      hsla(240, 53%, 93%, 0) 0.85px
+    );
 }
 
 #section-02 .title::after {
   margin-block-start: 5.5rem;
-  color: #fff;
-  opacity: 0.2;
-  font-size: 4.8rem;
-  content: "help meeeeeeeeeeeeeee...";
+  color: #7b41bc;
+  opacity: 1;
+  font-size: 2rem;
+  content: "help me";
   display: block;
   transform: scaleY(6);
   position: absolute;
   z-index: 20;
-  left: 1rem;
+  right: 0rem;
 }
 
 .section-2__img-box.wrong,
@@ -373,4 +402,90 @@ section header {
 
 .section-2__img-box.right img {
   object-fit: cover;
+}
+
+#section-03 > header {
+  background-image: linear-gradient(
+    to right top,
+    #f841a9,
+    #fc3c99,
+    #fd398a,
+    #fe397b,
+    #fc3b6c,
+    #fb3b63,
+    #fa3c5a,
+    #f83e51,
+    #f83c4b,
+    #f73a44,
+    #f7383e,
+    #f63737
+  );
+}
+
+#section-03 .presentor,
+#section-03 .general-title,
+#section-03 .slide-num {
+  color: #970e0e;
+  opacity: 0.7;
+}
+
+#section-03 .description,
+#section-03 .title {
+  color: #fff;
+}
+
+#section-03 .snippet {
+  background-color: #970e0e;
+}
+
+#section-03 .brief {
+  background-image: radial-gradient(
+      hsla(30, 0%, 100%, 0.2) 0.85px,
+      transparent 0.85px
+    ),
+    radial-gradient(
+      hsla(30, 0%, 100%, 0.2) 0.85px,
+      hsla(30, 0%, 100%, 0) 0.85px
+    );
+}
+
+.section-3__contact-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+
+  width: 17rem;
+
+  border: 3px solid #fff;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.section-3__contact {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section-3__contact .section-3__contact-name {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.section-3__contact .circle {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: #fff;
+
+  flex: 1 0 auto;
+}
+
+.right .section-3__contact-name {
+  line-height: 1.5;
+  width: 13rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

@@ -14,7 +14,7 @@
     <title>Defensive CSS</title>
   </head>
   <body>
-    <main>
+    <main id="main">
       <section id="section-01">
         <header>
           <div class="brief">
@@ -162,16 +162,23 @@
       <section id="section-03">
         <header>
           <div class="brief">
-            <h1 class="en title title-2">PREVENT IMAGE DISTORTION</h1>
-            <span class="en slide-num">02</span>
+            <h1 class="en title title-3">
+              DON'T<br />LET TEXT<br />WRAP OR OVERFL...
+            </h1>
+            <span class="en slide-num">03</span>
             <span class="code presentor">>Ata!</span>
             <span class="code general-title">DEFENSIVE CSS</span>
             <p class="fa description">
-              عکس‌ها از مهم‌ترین المان‌های هر وب‌سایتی هستند. اما ما کنترلی بر
-              روی همه عکس‌های وب‌سایت و aspect ratio آن‌ها نداریم چون ممکن است
-              از طرف کاربر آپلود شده باشند. راحتترین و بهترین کار قرار دادن
-              <span class="code snippet" dir="ltr">object-fit: cover;</span>
-              بر عکس مربوطه است.
+              در دنیای پروانه‌ها و رنگین کمان، متن‌ها همگی به اندازه هستند و
+              همگی در المانی که تعبیه شده‌اند به خوبی جا می‌گیرند و از اون بیرون
+              نمی‌زنند. اما در دنیای واقعی، ما باید آماده هر نوع متن با هر
+              اندازه‌ای باشیم. برای این بهتره تا حدی که المان پدر اجازه میده تا
+              متن بدون اینکه بشکنه یا ازش بزنه بیرون، متن رو نشون بدیم و بقیه‌اش
+              رو سه نقطه قرار بدیم که با دستور
+              <span class="code snippet" dir="ltr"
+                >text-overflow: ellipsis;</span
+              >
+              قابل دستیابیه.
             </p>
           </div>
         </header>
@@ -179,7 +186,7 @@
           <div class="code editor-box">
             <figure>
               <div class="code editor">
-                <p><span class="tag">.img</span> {</p>
+                <p><span class="tag">.text</span> {</p>
                 <p class="property">
                   &nbsp;&nbsp;&nbsp;&nbsp;
                   <span class="comment">// emptiness</span>
@@ -190,12 +197,29 @@
           </div>
           <div class="code-preview wrong">
             <figure>
-              <div class="section-2__img-box wrong">
-                <img src="img/01.jpg" />
+              <div class="section-3__contact-list wrong">
+                <div class="section-3__contact">
+                  <div class="circle"></div>
+                  <p class="fa section-3__contact-name">امیرعطا فرجی</p>
+                </div>
+                <div class="section-3__contact">
+                  <div class="circle"></div>
+                  <p class="fa section-3__contact-name">علیرضا بینش</p>
+                </div>
+                <div class="section-3__contact">
+                  <div class="circle"></div>
+                  <p class="fa section-3__contact-name">
+                    شرکت کداستار (زیر مجموعه مهیمن)
+                  </p>
+                </div>
+                <div class="section-3__contact">
+                  <div class="circle"></div>
+                  <p class="fa section-3__contact-name">پارسا اروانه</p>
+                </div>
               </div>
             </figure>
             <figcaption class="fa">
-              عکس aspect-ratio خود را از دست داده و غیر طبیعی دیده می‌شود.
+              مورد سوم در چند خط شکسته شده و یکپارچگی طراحی رو به هم میزنه.
             </figcaption>
           </div>
           <div class="code editor-box">
@@ -212,13 +236,30 @@
           </div>
           <div class="code-preview right">
             <figure>
-              <div class="section-2__img-box right">
-                <img src="img/01.jpg" />
+              <div class="section-3__contact-list right">
+                <div class="section-3__contact">
+                  <div class="circle"></div>
+                  <p class="fa section-3__contact-name">امیرعطا فرجی</p>
+                </div>
+                <div class="section-3__contact">
+                  <div class="circle"></div>
+                  <p class="fa section-3__contact-name">علیرضا بینش</p>
+                </div>
+                <div class="section-3__contact">
+                  <div class="circle"></div>
+                  <p class="fa section-3__contact-name">
+                    شرکت کداستار (زیر مجموعه مهیمن)
+                  </p>
+                </div>
+                <div class="section-3__contact">
+                  <div class="circle"></div>
+                  <p class="fa section-3__contact-name">پارسا اروانه</p>
+                </div>
               </div>
             </figure>
             <figcaption class="fa">
-              با object-fit: cover عکس کل المان پدر خود را می‌گیرد و ابعاد عکس
-              را به هم نمی‌ریزد.
+              مورد سوم الان جمله رو نمی‌شکنه و ادامه جمله رو نشان نمی‌ده و در
+              آخر جمله سه نقطه نشان می‌ده.
             </figcaption>
           </div>
         </div>
