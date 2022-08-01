@@ -452,6 +452,160 @@
           </div>
         </div>
       </section>
+
+      <section id="section-07">
+        <header>
+          <div class="brief">
+            <h1 class="en title title-7">HIDDEN SCROLLBARS</h1>
+            <span class="en slide-num">07</span>
+            <span class="code presentor">>Alireza</span>
+            <span class="code general-title">DEFENSIVE CSS</span>
+            <p class="fa description">
+              برای بعضی آیتم‌ها که محتوای طولانی دارند بهتره scrollbar قرار
+              بدیم. اما ممکنه متن ما متغیر باشه، و همیشه scrollbar به کارمون
+              نیاد و در این حالت scrollbar نباید نشون داده بشه. اگر از دستور
+              <span class="code snippet" dir="ltr">overflow-y: auto;</span>
+              استفاده کنیم، فقط در صورت نیاز scrollbar نشون داده میشه.
+            </p>
+          </div>
+        </header>
+        <div class="content">
+          <div class="code editor-box">
+            <figure>
+              <div class="code editor">
+                <p><span class="tag">.box</span> {</p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;overflow-y:
+                  <span class="value">scroll</span>;
+                </p>
+                <span>}</span>
+              </div>
+            </figure>
+          </div>
+          <div class="code-preview wrong">
+            <figure>
+              <div class="section-07__scroll">
+                <div class="en scrollbar-show">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Molestiae facilis iure eveniet, commodi ducimus dolorum odio
+                  perferendis quibusdam accusamus amet repellendus. Eaque itaque
+                  voluptates nihil dicta quisquam omnis pariatur tempore.
+                </div>
+                <div class="en">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </div>
+              </div>
+            </figure>
+            <figcaption class="fa">
+              حتی در جایی که متن قابل scroll نیست نیز scrollbar نشون داده می‌شه
+            </figcaption>
+          </div>
+          <div class="code editor-box">
+            <figure>
+              <div class="code editor">
+                p><span class="tag">.box</span> {</p>
+                  <p class="property">
+                    &nbsp;&nbsp;&nbsp;&nbsp;overflow-y:
+                    <span class="value">auto</span>;
+                  </p>
+                  <span>}</span>
+              </div>
+            </figure>
+          </div>
+          <div class="code-preview right">
+            <div class="section-07__overflow">
+              <div class="en scrollbar-show">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae facilis iure eveniet, commodi ducimus dolorum odio
+                perferendis quibusdam accusamus amet repellendus. Eaque itaque
+                voluptates nihil dicta quisquam omnis pariatur tempore.
+              </div>
+              <div class="en">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </div>
+            </div>
+          </figure>
+          <figcaption class="fa">
+فقط جایی که به scroll نیاز داریم، scrollbar نشون داده میشه          </figcaption>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-08">
+        <header>
+          <div class="brief">
+            <h1 class="en title title-8">STICKY GRIDS</h1>
+            <span class="en slide-num">08</span>
+            <span class="code presentor">>Alireza</span>
+            <span class="code general-title">DEFENSIVE CSS</span>
+            <p class="fa description">
+              ممکنه وقتی کل چینش سایت رو با grid انجام دادین، نیاز شده باشه که قسمتی رو sticky کنید، مثل منوی کناری. در این حالت خواهید دید که اون المان تمام ارتفاع کلی grid رو می‌گیره.<br> در این حالت باید با 
+              <span class="code snippet" dir="ltr">align-self: start;</span>
+اون المان رو از حالت پیش فرض stretch  در بیارین و به start تغییرش بدین.
+            </p>
+          </div>
+        </header>
+        <div class="content">
+          <div class="code editor-box">
+            <figure>
+              <div class="code editor">
+                <p><span class="tag">.box</span> {</p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;overflow-y:
+                  <span class="value">scroll</span>;
+                </p>
+                <span>}</span>
+              </div>
+            </figure>
+          </div>
+          <div class="code-preview wrong">
+            <figure>
+              <div class="section-07__scroll">
+                <div class="en scrollbar-show">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Molestiae facilis iure eveniet, commodi ducimus dolorum odio
+                  perferendis quibusdam accusamus amet repellendus. Eaque itaque
+                  voluptates nihil dicta quisquam omnis pariatur tempore.
+                </div>
+                <div class="en">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </div>
+              </div>
+            </figure>
+            <figcaption class="fa">
+              حتی در جایی که متن قابل scroll نیست نیز scrollbar نشون داده می‌شه
+            </figcaption>
+          </div>
+          <div class="code editor-box">
+            <figure>
+              <div class="code editor">
+                p><span class="tag">.box</span> {</p>
+                  <p class="property">
+                    &nbsp;&nbsp;&nbsp;&nbsp;overflow-y:
+                    <span class="value">auto</span>;
+                  </p>
+                  <span>}</span>
+              </div>
+            </figure>
+          </div>
+          <div class="code-preview right">
+            <div class="section-07__overflow">
+              <div class="en scrollbar-show">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae facilis iure eveniet, commodi ducimus dolorum odio
+                perferendis quibusdam accusamus amet repellendus. Eaque itaque
+                voluptates nihil dicta quisquam omnis pariatur tempore.
+              </div>
+              <div class="en">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </div>
+            </div>
+          </figure>
+          <figcaption class="fa">
+فقط جایی که به scroll نیاز داریم، scrollbar نشون داده میشه          </figcaption>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
   <script src="./js/script.js"></script>
