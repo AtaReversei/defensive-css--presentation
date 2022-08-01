@@ -20,13 +20,13 @@ body {
   width: 100%;
 }
 
-main {
+/* main {
   display: flex;
   flex-direction: row-reverse;
 
   transform: translateX(var(--percentage));
   transition: transform 500ms ease-in;
-}
+} */
 
 section {
   flex: 1 0 100%;
@@ -112,6 +112,10 @@ figcaption {
   color: rgb(124, 122, 128);
 }
 
+.margin-bottom {
+  margin-block-end: 4rem;
+}
+
 section header {
   display: flex;
   align-items: center;
@@ -194,11 +198,16 @@ section header {
   line-height: 0.8;
 }
 
+.title-1 {
+  transform-style: preserve-3d;
+}
+
 .title-1::before {
   content: "";
   display: block;
   position: absolute;
 
+  transform: translateZ(-1px);
   top: -2rem;
   right: -2rem;
   height: 83%;
@@ -356,6 +365,7 @@ section header {
 #section-02 .title {
   color: #fff;
   position: relative;
+  transform-style: preserve-3d;
 }
 
 #section-02 .snippet {
@@ -374,16 +384,15 @@ section header {
 }
 
 #section-02 .title::after {
-  margin-block-start: 5.5rem;
-  color: #7b41bc;
-  opacity: 1;
-  font-size: 2rem;
-  content: "help me";
+  color: #9b56d1;
+  font-size: 3rem;
+  filter: blur(1px);
+  content: "I'm a distorted image";
   display: block;
-  transform: scaleY(6);
   position: absolute;
-  z-index: 20;
   right: 0rem;
+  top: 17rem;
+  transform: translateZ(-1px) scaleY(4);
 }
 
 .section-2__img-box.wrong,
@@ -488,4 +497,253 @@ section header {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+#section-04 > header {
+  background-image: linear-gradient(
+    to right bottom,
+    #f63737,
+    #f63d3b,
+    #f6423e,
+    #f54642,
+    #f54b45,
+    #f55047,
+    #f55448,
+    #f5584a,
+    #f65d4b,
+    #f7614b,
+    #f7664c,
+    #f86a4d
+  );
+}
+
+#section-04 .presentor,
+#section-04 .general-title,
+#section-04 .slide-num {
+  color: #a31b1b;
+  opacity: 0.7;
+}
+
+#section-04 .description {
+  color: #fff;
+}
+
+#section-04 .title {
+  color: #f86a4d;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+#section-04 .title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  transform: translateZ(-1px);
+
+  top: -5rem;
+  right: -5rem;
+  width: 90%;
+  height: 110%;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+#section-04 .snippet {
+  background-color: #a31b1b;
+}
+
+#section-04 .brief {
+  background-image: radial-gradient(
+      hsla(30, 0%, 100%, 0.2) 0.85px,
+      transparent 0.85px
+    ),
+    radial-gradient(
+      hsla(30, 0%, 100%, 0.2) 0.85px,
+      hsla(30, 0%, 100%, 0) 0.85px
+    );
+}
+
+#section-04 figure {
+  position: relative;
+}
+
+#section-04 img {
+  width: 30rem;
+  height: 30rem;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.section-4__image-bg {
+  background-image: linear-gradient(to right top, #ddd, #fff);
+}
+
+#section-04 .text-on-image {
+  position: absolute;
+  font-size: 2rem;
+
+  bottom: 1rem;
+  right: 16rem;
+}
+
+#section-04 .text-on-image.wrong {
+  color: #e14047;
+}
+
+#section-04 .text-on-image.right {
+  color: #24b375;
+}
+
+#section-05 > header {
+  background-image: linear-gradient(
+    to right top,
+    #f86a4d,
+    #f46f47,
+    #f07542,
+    #ec7a3d,
+    #e77f39,
+    #e68436,
+    #e58933,
+    #e38e30,
+    #e5952c,
+    #e69b28,
+    #e7a223,
+    #e7a91e
+  );
+}
+
+#section-05 .presentor,
+#section-05 .general-title,
+#section-05 .slide-num {
+  color: #ad2e14;
+  opacity: 0.7;
+}
+
+#section-05 .description,
+#section-05 .title {
+  color: #fff;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+#section-05 .title::after {
+  content: "NOW YOU CAN'T ZOOM BACK HAHA";
+  display: block;
+  position: absolute;
+  transform: translateZ(-1px);
+  top: -6rem;
+  left: -5rem;
+  font-size: 10rem;
+  color: #f86a4d;
+}
+
+#section-05 .snippet {
+  background-color: #ad2e14;
+}
+
+#section-05 .brief {
+  background-image: radial-gradient(
+      hsla(30, 0%, 100%, 0.2) 0.85px,
+      transparent 0.85px
+    ),
+    radial-gradient(
+      hsla(30, 0%, 100%, 0.2) 0.85px,
+      hsla(30, 0%, 100%, 0) 0.85px
+    );
+}
+
+#section-05 .code-preview.wrong {
+  overflow: hidden;
+}
+
+#section-05 input {
+  color: #666;
+  border: none;
+  outline: none;
+}
+
+#section-05 .wrong input {
+  width: 200%;
+  height: 20rem;
+  border-radius: 20px;
+  padding: 4rem;
+  font-size: 8rem;
+}
+
+#section-05 .right input {
+  width: 100%;
+  height: 4rem;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+}
+
+#section-06 > header {
+  background-image: linear-gradient(
+    to right bottom,
+    #e7a91e,
+    #e8aa21,
+    #e8ac24,
+    #e9ad26,
+    #eaae29,
+    #eab12a,
+    #ebb32a,
+    #ebb62b,
+    #ebbb2b,
+    #ebbf2b,
+    #ebc42b,
+    #ebc92c
+  );
+}
+
+#section-06 .presentor,
+#section-06 .general-title,
+#section-06 .slide-num {
+  color: #ff4800;
+  opacity: 0.7;
+}
+
+#section-06 .description,
+#section-06 .title {
+  color: #fff;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+#section-06 .rotate {
+  display: inline-block;
+  transform: rotate(-4deg) scale(1.05);
+  background-image: linear-gradient(to left top, #dd9e16, #f7d541);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+#section-06 .snippet {
+  background-color: #ff4800;
+}
+
+#section-06 .brief {
+  background-image: radial-gradient(
+      hsla(30, 0%, 100%, 0.2) 0.85px,
+      transparent 0.85px
+    ),
+    radial-gradient(
+      hsla(30, 0%, 100%, 0.2) 0.85px,
+      hsla(30, 0%, 100%, 0) 0.85px
+    );
+}
+
+#section-06 .box {
+  width: 100%;
+  height: 15rem;
+
+  background-image: linear-gradient(to right top, #ddd, #fff);
+  border-radius: 10px;
+  transition: transform 300ms ease-in;
+}
+
+@media (hover: hover) {
+  #section-06 .box:hover {
+    transform: translateY(-1rem);
+  }
 }

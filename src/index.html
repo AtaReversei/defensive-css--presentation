@@ -264,6 +264,194 @@
           </div>
         </div>
       </section>
+
+      <section id="section-04">
+        <header>
+          <div class="brief">
+            <h1 class="en title title-4">SET BACKGROUND COLORS FOR IMAGES</h1>
+            <span class="en slide-num">04</span>
+            <span class="code presentor">>Ata!</span>
+            <span class="code general-title">DEFENSIVE CSS</span>
+            <p class="fa description">
+              بعضی وقت‌ها ممکنه نوشته‌ای روی عکس قرار بدیم و کلی هم حال کنیم.
+              همه چی اوکیه ولی اگه عکس load نشه و رنگ نوشته‌تون با رنگ پس زمینه
+              نزدیک باشه یا خدای نکرده هم‌رنگ باشه، اون موقع متن رو نمیشه خوند.
+              میتونیم با ساده‌ترین کد یک خطی جهان، یعنی
+              <span class="code snippet" dir="ltr"
+                >background-color: white;</span
+              >
+              این مشکل رو حل کنیم.
+            </p>
+          </div>
+        </header>
+        <div class="content">
+          <div class="code editor-box">
+            <figure>
+              <div class="code editor">
+                <p><span class="tag">.img</span> {</p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <span class="comment">// emptiness</span>
+                </p>
+                <span>}</span>
+              </div>
+            </figure>
+          </div>
+          <div class="code-preview wrong">
+            <figure>
+              <img src="img/01.jpg" />
+              <p class="text-on-image fa wrong">ماشین بسیار زیبا</p>
+            </figure>
+            <figcaption class="fa margin-bottom">
+              در این مورد عکس load شده و متن خواناست.
+            </figcaption>
+            <figure>
+              <img src="img/no-image.jpg" />
+              <p class="text-on-image fa wrong">ماشین بسیار زیبا</p>
+            </figure>
+            <figcaption class="fa">
+              در این مورد عکس مورد نظر load نشده و چون متن با پس زمینه رنگ
+              نزدیکی داره، متن خوانا نیست.
+            </figcaption>
+          </div>
+          <div class="code editor-box">
+            <figure>
+              <div class="code editor">
+                <p><span class="tag">.img</span> {</p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;background-color:
+                  <span class="value">#fff</span>;
+                </p>
+                <span>}</span>
+              </div>
+            </figure>
+          </div>
+          <div class="code-preview right">
+            <figure>
+              <img src="img/no-image.jpg" class="section-4__image-bg" />
+              <p class="text-on-image fa right">ماشین بسیار زیبا</p>
+            </figure>
+            <figcaption class="fa">
+              با این که عکسی load نشده ولی چون رنگ پس زمینه داره، متن خواناست.
+            </figcaption>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-05">
+        <header>
+          <div class="brief">
+            <h1 class="en title title-5">INPUT ZOOM ON SAFARI</h1>
+            <span class="en slide-num">05</span>
+            <span class="code presentor">>Ata!</span>
+            <span class="code general-title">DEFENSIVE CSS</span>
+            <p class="fa description">
+              بعضی وقت‌ها ممکنه نوشته‌ای روی عکس قرار بدیم و کلی هم حال کنیم.
+              همه چی اوکیه ولی اگه عکس load نشه و رنگ نوشته‌تون با رنگ پس زمینه
+              نزدیک باشه یا خدای نکرده هم‌رنگ باشه، اون موقع متن رو نمیشه خوند.
+              میتونیم با ساده‌ترین کد یک خطی جهان، یعنی
+              <span class="code snippet" dir="ltr"
+                >background-color: white;</span
+              >
+              این مشکل رو حل کنیم.
+            </p>
+          </div>
+        </header>
+        <div class="content">
+          <div class="code editor-box">
+            <figure>
+              <div class="code editor">
+                <p><span class="tag">.input</span> {</p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <span class="comment">// emptiness</span>
+                </p>
+                <span>}</span>
+              </div>
+            </figure>
+          </div>
+          <div class="code-preview wrong">
+            <figure>
+              <input class="fa" placeholder="چیزی بنویسید" />
+            </figure>
+            <figcaption class="fa margin-bottom">
+              در حالت focus در safari صفحه زوم می‌شه اما نمیتونیم زوم اون رو کم
+              کنیم.
+            </figcaption>
+          </div>
+          <div class="code editor-box">
+            <figure>
+              <div class="code editor">
+                <p><span class="tag">.input</span> {</p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;font-size:
+                  <span class="value">16px</span>;
+                </p>
+                <span>}</span>
+              </div>
+            </figure>
+          </div>
+          <div class="code-preview right">
+            <figure>
+              <input class="fa" placeholder="چیزی بنویسید" />
+            </figure>
+            <figcaption class="fa">
+              با اعمال font-size از focus خودکار safari می‌تونیم جلوگیری کنیم.
+            </figcaption>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-06">
+        <header>
+          <div class="brief">
+            <h1 class="en title title-6">
+              HOVER ON <span class="rotate">MOBILE</span> DEVICES
+            </h1>
+            <span class="en slide-num">06</span>
+            <span class="code presentor">>Ata!</span>
+            <span class="code general-title">DEFENSIVE CSS</span>
+            <p class="fa description">
+              وقتی برای hover میایم یه سری styleها رو تعریف می‌کنیم، مخاطبمون از
+              این کارها کسایی هست که از mouse یا trackpad استفاده می‌کنن. با
+              موبایل هم میشه حالت hover رو با نیمه لمس کردن فعال کرد اما نه تنها
+              این فعال کردن خوب نیست بلکه میتونه به کاربر تجربه بدی بده. ما
+              میتونیم با
+              <span class="code snippet" dir="ltr"
+                >@mdia (hover: hover){ // code }</span
+              >
+              این مشکل رو برطرف کنیم.
+            </p>
+          </div>
+        </header>
+        <div class="content">
+          <div class="code editor-box">
+            <figure>
+              <div class="code editor">
+                <p>
+                  <span class="property">@media (</span
+                  ><span class="tag">hover:</span>
+                  <span class="value">hover</span>) {
+                </p>
+                <p>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">.box</span
+                  ><span class="value">::hover</span> {
+                  <span class="comment">// code</span> }
+                </p>
+                <span>}</span>
+              </div>
+            </figure>
+          </div>
+          <div class="code-preview right">
+            <figure>
+              <div class="box"></div>
+            </figure>
+            <figcaption class="fa">
+              این کارت رو نمی‌تونیم با موبایل، حالت hoverش رو فعال کنیم.
+            </figcaption>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
   <script src="./js/script.js"></script>
