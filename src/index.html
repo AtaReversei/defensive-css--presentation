@@ -35,52 +35,191 @@
           </div>
         </header>
         <div class="content">
-          <h2>استفاده از فلکس</h2>
-          <p>متن</p>
-          <div class="code">
+          <div class="code editor-box">
             <figure>
-              <pre>
-                .box {
-                    display: flex;
-                }
-              </pre>
+              <div class="code editor">
+                <p><span class="tag">.box</span> {</p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;display:
+                  <span class="value">flex</span>;
+                </p>
+                <span>}</span>
+              </div>
             </figure>
           </div>
           <div class="code-preview wrong">
             <figure>
-              <div class="section-01__flex-container--wrong">
-                <div class="section-01__flex-box-1"></div>
-                <div class="section-01__flex-box-2"></div>
-                <div class="section-01__flex-box-3"></div>
-                <div class="section-01__flex-box-4"></div>
-                <div class="section-01__flex-box-5"></div>
+              <div class="section-1__flex-container wrong">
+                <div class="section-1__flex-box"></div>
+                <div class="section-1__flex-box"></div>
+                <div class="section-1__flex-box"></div>
+                <div class="section-1__flex-box"></div>
+                <div class="section-1__flex-box"></div>
               </div>
             </figure>
-            <figcaption>باکس ها از پدر بیرون هستند</figcaption>
+            <figcaption class="fa">
+              باکس ها در پدر خود جای نگرفته‌اند و بیرون هستند.
+            </figcaption>
           </div>
-
-          <p>متن</p>
-          <div class="code">
+          <div class="code editor-box">
             <figure>
-              <pre>
-                .box {
-                    display: flex;
-                    flex-wrap: wrap;
-                }
-              </pre>
+              <div class="code editor">
+                <p><span class="tag">.box</span> {</p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;display:
+                  <span class="value">flex</span>;
+                </p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;flex-wrap:
+                  <span class="value">wrap</span>;
+                </p>
+                <span>}</span>
+              </div>
             </figure>
           </div>
           <div class="code-preview right">
             <figure>
-              <div class="section-01__flex-container--right">
-                <div class="section-01__flex-box-1"></div>
-                <div class="section-01__flex-box-2"></div>
-                <div class="section-01__flex-box-3"></div>
-                <div class="section-01__flex-box-4"></div>
-                <div class="section-01__flex-box-5"></div>
+              <div class="section-1__flex-container right">
+                <div class="section-1__flex-box"></div>
+                <div class="section-1__flex-box"></div>
+                <div class="section-1__flex-box"></div>
+                <div class="section-1__flex-box"></div>
+                <div class="section-1__flex-box"></div>
               </div>
             </figure>
-            <figcaption>باکس ها از پدر بیرون هستند</figcaption>
+            <figcaption class="fa">
+              باکس‌ها به درستی درون پدر خود جای گرفته‌اند.
+            </figcaption>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-02">
+        <header>
+          <div class="brief">
+            <h1 class="en title title-2">PREVENT IMAGE DISTORTION</h1>
+            <span class="en slide-num">02</span>
+            <span class="code presentor">>Ata!</span>
+            <span class="code general-title">DEFENSIVE CSS</span>
+            <p class="fa description">
+              عکس‌ها از مهم‌ترین المان‌های هر وب‌سایتی هستند. اما ما کنترلی بر
+              روی همه عکس‌های وب‌سایت و aspect ratio آن‌ها نداریم چون ممکن است
+              از طرف کاربر آپلود شده باشند. راحتترین و بهترین کار قرار دادن
+              <span class="code snippet" dir="ltr">object-fit: cover;</span>
+              بر عکس مربوطه است.
+            </p>
+          </div>
+        </header>
+        <div class="content">
+          <div class="code editor-box">
+            <figure>
+              <div class="code editor">
+                <p><span class="tag">.img</span> {</p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <span class="comment">// emptiness</span>
+                </p>
+                <span>}</span>
+              </div>
+            </figure>
+          </div>
+          <div class="code-preview wrong">
+            <figure>
+              <div class="section-2__img-box wrong">
+                <img src="img/01.jpg" />
+              </div>
+            </figure>
+            <figcaption class="fa">
+              عکس aspect-ratio خود را از دست داده و غیر طبیعی دیده می‌شود.
+            </figcaption>
+          </div>
+          <div class="code editor-box">
+            <figure>
+              <div class="code editor">
+                <p><span class="tag">.img</span> {</p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;object-fit:
+                  <span class="value">cover</span>;
+                </p>
+                <span>}</span>
+              </div>
+            </figure>
+          </div>
+          <div class="code-preview right">
+            <figure>
+              <div class="section-2__img-box right">
+                <img src="img/01.jpg" />
+              </div>
+            </figure>
+            <figcaption class="fa">
+              با object-fit: cover عکس کل المان پدر خود را می‌گیرد و ابعاد عکس
+              را به هم نمی‌ریزد.
+            </figcaption>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-03">
+        <header>
+          <div class="brief">
+            <h1 class="en title title-2">PREVENT IMAGE DISTORTION</h1>
+            <span class="en slide-num">02</span>
+            <span class="code presentor">>Ata!</span>
+            <span class="code general-title">DEFENSIVE CSS</span>
+            <p class="fa description">
+              عکس‌ها از مهم‌ترین المان‌های هر وب‌سایتی هستند. اما ما کنترلی بر
+              روی همه عکس‌های وب‌سایت و aspect ratio آن‌ها نداریم چون ممکن است
+              از طرف کاربر آپلود شده باشند. راحتترین و بهترین کار قرار دادن
+              <span class="code snippet" dir="ltr">object-fit: cover;</span>
+              بر عکس مربوطه است.
+            </p>
+          </div>
+        </header>
+        <div class="content">
+          <div class="code editor-box">
+            <figure>
+              <div class="code editor">
+                <p><span class="tag">.img</span> {</p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <span class="comment">// emptiness</span>
+                </p>
+                <span>}</span>
+              </div>
+            </figure>
+          </div>
+          <div class="code-preview wrong">
+            <figure>
+              <div class="section-2__img-box wrong">
+                <img src="img/01.jpg" />
+              </div>
+            </figure>
+            <figcaption class="fa">
+              عکس aspect-ratio خود را از دست داده و غیر طبیعی دیده می‌شود.
+            </figcaption>
+          </div>
+          <div class="code editor-box">
+            <figure>
+              <div class="code editor">
+                <p><span class="tag">.img</span> {</p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;object-fit:
+                  <span class="value">cover</span>;
+                </p>
+                <span>}</span>
+              </div>
+            </figure>
+          </div>
+          <div class="code-preview right">
+            <figure>
+              <div class="section-2__img-box right">
+                <img src="img/01.jpg" />
+              </div>
+            </figure>
+            <figcaption class="fa">
+              با object-fit: cover عکس کل المان پدر خود را می‌گیرد و ابعاد عکس
+              را به هم نمی‌ریزد.
+            </figcaption>
           </div>
         </div>
       </section>
