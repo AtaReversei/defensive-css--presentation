@@ -15,6 +15,18 @@
   </head>
   <body>
     <main id="main">
+      <section id="section-pre-01">
+        <p class="code css-defensive">DEFENSIVE CSS</p>
+      </section>
+
+      <section id="section-pre-02">
+        <div class="info">
+
+          <div><p class="p-name fa"><img src="img/ata.jpg">امیرعطا فرجی</p></div>
+          <div><p class="p-name fa"><img src="img/alireza.jpg">علیرضا بینش</p></div>
+        </div>
+      </section>
+
       <section id="section-01">
         <header>
           <div class="brief">
@@ -24,9 +36,9 @@
             <span class="code presentor">>Ata!</span>
             <span class="code general-title">DEFENSIVE CSS</span>
             <p class="fa description">
-              هر روزه از flex برای پیاده‌سازی انواع چیدمان‌ها استفاده می‌کنیم. اما گاهی اوقات بر اساس نیازهای زمان حال چیدمان رو طراحی می‌کنیم و فکر آینده رو نمی‌کنیم. در flex اگر تعداد فرزندها زیاد بشه ممکنه چیدمانمون بهم بریزه. با کد ساده
+              هر روزه از flex برای پیاده‌سازی انواع چیدمان‌ها استفاده می‌کنیم. اما گاهی اوقات بر اساس نیازهای زمان حال چیدمان را طراحی می‌کنیم و فکر آینده را نمی‌کنیم. در flex اگر تعداد فرزندها زیاد بشود ممکن است چیدمانمان به هم بریزد. با کد ساده
               <span class="code snippet" dir="ltr">flex-wrap: wrap;</span>
-             میتونیم این مشکل رو حل کنیم.
+             می‌توانیم این مشکل را حل کنیم.
             </p>
           </div>
         </header>
@@ -99,8 +111,8 @@
             <span class="code general-title">DEFENSIVE CSS</span>
             <p class="fa description">
               عکس‌ها از مهم‌ترین المان‌های هر وب‌سایتی هستند. اما ما کنترلی بر
-              روی همه عکس‌های وب‌سایت و aspect ratio اون‌ها نداریم چون ممکن است
-              از طرف کاربر آپلود شده باشند یا back-end ما عکس‌هایی متفاوت نسبت به آنچه در ذهن داشتیم برامون بفرسته. راحتترین و بهترین کار قرار دادن
+              روی همه عکس‌های وب‌سایت و Aspect Ratio آن‌ها نداریم چون ممکن است
+              از طرف کاربر آپلود شده باشند یا Back-end ما عکس‌هایی متفاوت نسبت به آنچه در ذهن داشتیم برایمان بفرستد. راحت‌ترین و بهترین کار قرار دادن
               <span class="code snippet" dir="ltr">object-fit: cover;</span>
               بر عکس مربوطه است.
             </p>
@@ -130,7 +142,7 @@
             </figure>
             
             <figcaption class="fa">
-              عکس aspect-ratio خود را از دست داده و غیر طبیعی دیده می‌شود.
+              عکس Aspect Ratio خود را از دست داده و غیر طبیعی دیده می‌شود.
             </figcaption>
           </div>
           <div class="code editor-box">
@@ -173,16 +185,16 @@
             <span class="code presentor">>Ata!</span>
             <span class="code general-title">DEFENSIVE CSS</span>
             <p class="fa description">
-              در دنیای پروانه‌ها و رنگین کمان، متن‌ها همگی به اندازه هستند و
-              همگی در المانی که تعبیه شده‌اند به خوبی جا می‌گیرند و از اون بیرون
+              در دنیای ایده‌آل، متن‌ها همگی به اندازه مناسبی هستند و
+              همگی در المانی که تعبیه شده‌اند به خوبی جای می‌گیرند و از آن بیرون
               نمی‌زنند. اما در دنیای واقعی، ما باید آماده هر نوع متن با هر
-              اندازه‌ای باشیم. برای این بهتره تا حدی که المان پدر اجازه میده تا
-              متن بدون اینکه بشکنه یا ازش بزنه بیرون، متن رو نشون بدیم و بقیه‌اش
-              رو سه نقطه قرار بدیم که با دستور
+              اندازه‌ای باشیم. برای این بهتر است تا حدی که المان پدر اجازه می‌دهد تا
+              متن بدون آن که بشکند یا بیرون از آن قرار بگیرد، متن را نشان بدهیم و بقیه‌ آن
+              را سه نقطه قرار بدهیم که با دستور
               <span class="code snippet" dir="ltr"
                 >text-overflow: ellipsis;</span
               >
-              قابل دستیابیه.
+              قابل دستیابی می‌باشد.
             </p>
           </div>
         </header>
@@ -223,7 +235,7 @@
               </div>
             </figure>
             <figcaption class="fa">
-              مورد سوم در چند خط شکسته شده و یکپارچگی طراحی رو به هم میزنه.
+              مورد سوم در چند خط شکسته شده است و یکپارچگی طراحی را به هم میزند.
             </figcaption>
           </div>
           <div class="code editor-box">
@@ -270,8 +282,8 @@
               </div>
             </figure>
             <figcaption class="fa">
-              مورد سوم الان جمله رو نمی‌شکنه و ادامه جمله رو نشان نمی‌ده و در
-              آخر جمله سه نقطه نشان می‌ده.
+              مورد سوم جمله رو نمی‌شکند و همچنین ادامه جمله را نشان نمی‌دهد و در
+              آخر جمله سه نقطه نشان می‌دهد.
             </figcaption>
 
           </div>
@@ -315,7 +327,7 @@
               </div>
             </figure>
             <figcaption class="fa">
-              مورد سوم وقتی به انتهای المان پدرش میرسه، کلمه میشکنه و میره سطر بعدی.
+              مورد سوم وقتی به انتهای المان پدرش می‌رسد، کلمه می‌شکند و به سطر بعدی می‌رود.
             </figcaption>
           </div>
           <div class="code editor-box">
@@ -358,7 +370,7 @@
               </div>
             </figure>
             <figcaption class="fa">
-              مورد سوم وقتی به انتهای المان پدرش میرسه، کلمه میشکنه و میره سطر بعدی.
+              مورد سوم وقتی به انتهای المان پدرش می‌رسد، کلمه می‌شکند و به سطر بعدی می‌رود.
             </figcaption>
           </div>
         </div>
@@ -372,14 +384,14 @@
             <span class="code presentor">>Ata!</span>
             <span class="code general-title">DEFENSIVE CSS</span>
             <p class="fa description">
-              بعضی وقت‌ها ممکنه نوشته‌ای روی عکس قرار بدیم و کلی هم حال کنیم.
-              همه چی اوکیه ولی اگه عکس load نشه و رنگ نوشته‌تون با رنگ پس زمینه
-              نزدیک باشه یا خدای نکرده هم‌رنگ باشه، اون موقع متن رو نمیشه خوند.
-              میتونیم با ساده‌ترین کد یک خطی جهان، یعنی
+              بعضی وقت‌ها ممکن است نوشته‌ای را روی عکس قرار بدهیم.
+              این کار مشکلی ندارد ولی اگر عکس load نشود و رنگ نوشته با رنگ پس‌زمینه
+              نزدیک باشد و یا حتی هم‌رنگ باشد، آن موقع متن را به سختی می‌توان خواند.
+              می‌توانیم با کد ساده‌
               <span class="code snippet" dir="ltr"
                 >background-color: white;</span
               >
-              این مشکل رو حل کنیم.
+              این مشکل را حل کنیم.
             </p>
           </div>
         </header>
@@ -399,18 +411,18 @@
           <div class="code-preview wrong">
             <figure>
               <img src="img/01.jpg" />
-              <p class="text-on-image fa wrong">ماشین بسیار زیبا</p>
+              <p class="text-on-image fa wrong">ماشین سیاه</p>
             </figure>
             <figcaption class="fa margin-bottom">
-              در این مورد عکس load شده و متن خواناست.
+              در این مورد عکس load شده است و متن خواناست.
             </figcaption>
             <figure>
               <img src="img/no-image.jpg" />
-              <p class="text-on-image fa wrong">ماشین بسیار زیبا</p>
+              <p class="text-on-image fa wrong">ماشین سیاه</p>
             </figure>
             <figcaption class="fa">
-              در این مورد عکس مورد نظر load نشده و چون متن با پس زمینه رنگ
-              نزدیکی داره، متن خوانا نیست.
+              در این مورد عکس مورد نظر load نشده است و چون متن با پس زمینه رنگ
+              نزدیکی دارد، متن خوانا نیست.
             </figcaption>
           </div>
           <div class="code editor-box">
@@ -428,10 +440,10 @@
           <div class="code-preview right">
             <figure>
               <img src="img/no-image.jpg" class="section-4__image-bg" />
-              <p class="text-on-image fa right">ماشین بسیار زیبا</p>
+              <p class="text-on-image fa right">ماشین سیاه</p>
             </figure>
             <figcaption class="fa">
-              با این که عکسی load نشده ولی چون رنگ پس زمینه داره، متن خواناست.
+              با این که عکسی load نشده است ولی چون رنگ پس‌زمینه دارد، متن خواناست.
             </figcaption>
           </div>
         </div>
@@ -445,11 +457,11 @@
             <span class="code presentor">>Ata!</span>
             <span class="code general-title">DEFENSIVE CSS</span>
             <p class="fa description">
-              مشکلی توی مرورگر safari گوشی‌ها وجود داره و اونم این مورده که وقتی روی inputای میزنیم تا اطلاعاتمون رو وارد کنیم، صفحه زوم میشه تا اون inputئه در مرکز توجه کاربر باشه. تا اینجا که خوبه ولی مشکل از جایی شروع میشه که نمیتونیم به عقب زوم کنیم. با اعمال سایز فونت ثابت 
+              مشکلی در مرورگر Safari گوشی‌ها وجود دارد و آن هم این مورد است که وقتی بر inputای می‌زنیم تا اطلاعاتمان رو وارد کنیم، صفحه زوم میشه تا آن input در مرکز توجه کاربر باشد. مشکل از جایی شروع می‌شود که نمی‌توانیم به عقب زوم کنیم. با اعمال سایز فونت ثابت <br>
               <span class="code snippet" dir="ltr"
                 >font-size: 16px;</span
               >
-              این مشکل رو می‌تونیم حل کنیم.
+              این مشکل را می‌توانیم حل کنیم.
             </p>
           </div>
         </header>
@@ -471,7 +483,7 @@
               <input class="fa" placeholder="چیزی بنویسید" />
             </figure>
             <figcaption class="fa margin-bottom">
-              در حالت focus در safari صفحه زوم می‌شه اما نمیتونیم زوم اون رو کم
+              در حالت focus در Safari صفحه زوم می‌شود اما نمی‌توانیم زوم آن را کم
               کنیم.
             </figcaption>
           </div>
@@ -492,7 +504,7 @@
               <input class="fa" placeholder="چیزی بنویسید" />
             </figure>
             <figcaption class="fa">
-              با اعمال font-size از focus خودکار safari می‌تونیم جلوگیری کنیم.
+              با اعمال font-size از focus خودکار Safari می‌تونیم جلوگیری کنیم.
             </figcaption>
           </div>
         </div>
@@ -508,15 +520,15 @@
             <span class="code presentor">>Ata!</span>
             <span class="code general-title">DEFENSIVE CSS</span>
             <p class="fa description">
-              وقتی برای hover میایم یه سری styleها رو تعریف می‌کنیم، مخاطبمون از
-              این کارها کسایی هست که از mouse یا trackpad استفاده می‌کنن. با
-              موبایل هم میشه حالت hover رو با نیمه لمس کردن فعال کرد اما نه تنها
-              این فعال کردن خوب نیست بلکه میتونه به کاربر تجربه بدی بده. ما
-              میتونیم با
+              وقتی برای حالت hover استایل‌هایی را تعریف می‌کنیم، مخاطبمان از
+              این کار کسانی هستند که از mouse یا trackpad استفاده می‌کنند. با
+              موبایل هم حالت hover را با نیمه لمس کردن می‌شود فعال کرد اما نه تنها
+              این فعال کردن خوب نیست بلکه می‌تواند به کاربر تجربه بدی بدهد. ما
+              می‌توانیم با
               <span class="code snippet" dir="ltr"
                 >@media (hover: hover){ // code }</span
               >
-              این مشکل رو برطرف کنیم.
+              این مشکل را برطرف کنیم.
             </p>
           </div>
         </header>
@@ -543,7 +555,7 @@
               <div class="box"></div>
             </figure>
             <figcaption class="fa">
-              این کارت رو نمی‌تونیم با موبایل، حالت hoverش رو فعال کنیم.
+              این کارت را با موبایل، نمی‌توانیم حالت hoverش را فعال کنیم.
             </figcaption>
           </div>
         </div>
@@ -557,11 +569,11 @@
             <span class="code presentor">>Alireza</span>
             <span class="code general-title">DEFENSIVE CSS</span>
             <p class="fa description">
-              برای بعضی آیتم‌ها که محتوای طولانی دارند بهتره scrollbar قرار
-              بدیم. اما ممکنه متن ما متغیر باشه، و همیشه scrollbar به کارمون
-              نیاد و در این حالت scrollbar نباید نشون داده بشه. اگر از دستور
+              برای بعضی آیتم‌ها که محتوای طولانی دارند بهتر است که scrollbar قرار
+              بدهیم. اما ممکن است متن ما متغیر باشد، و همیشه scrollbar به کارمان
+              نیاید و در این حالت scrollbar نباید نشان داده بشود. اگر از دستور
               <span class="code snippet" dir="ltr">overflow-y: auto;</span>
-              استفاده کنیم، فقط در صورت نیاز scrollbar نشون داده میشه.
+              استفاده کنیم، فقط در صورت نیاز scrollbar نشان داده می‌شود.
             </p>
           </div>
         </header>
@@ -593,7 +605,7 @@
               </div>
             </figure>
             <figcaption class="fa">
-              حتی در جایی که متن قابل scroll نیست نیز scrollbar نشون داده می‌شه
+              حتی در جایی که متن قابل scroll نیست نیز scrollbar نشان داده می‌شود.
             </figcaption>
           </div>
           <div class="code editor-box">
@@ -622,7 +634,7 @@
             </div>
           </figure>
           <figcaption class="fa">
-فقط جایی که به scroll نیاز داریم، scrollbar نشون داده میشه          </figcaption>
+فقط جایی که به scroll نیاز داریم، scrollbar نشان داده می‌شود.          </figcaption>
           </div>
         </div>
       </section>
@@ -635,9 +647,9 @@
             <span class="code presentor">>Alireza</span>
             <span class="code general-title">DEFENSIVE CSS</span>
             <p class="fa description">
-              ممکنه وقتی کل چینش سایت رو با grid انجام دادین، نیاز شده باشه که قسمتی رو sticky کنید، مثل منوی کناری. در این حالت خواهید دید که اون المان تمام ارتفاع کلی grid رو می‌گیره.<br> در این حالت باید با 
+              ممکن است وقتی کل چینش سایت را با grid انجام داده‌اید، نیاز شده که قسمتی را sticky کنید، مثل منوی کناری. در این حالت خواهید دید که آن المان تمام ارتفاع کلی grid را می‌گیرد.<br> در این حالت باید با 
               <span class="code snippet" dir="ltr">align-self: start;</span>
-اون المان رو از حالت پیش فرض stretch  در بیارین و به start تغییرش بدین.
+آن المان را از حالت پیش فرض stretch در بیاورید و به start تغییر بدهید.
             </p>
           </div>
         </header>
@@ -673,7 +685,7 @@
                 
             </figure>
             <figcaption class="fa">
-              منوی کناری ارتفاعی برابر با ارتفاع content گرفته و خاصیت stickyش کار نمیکنه
+              منوی کناری ارتفاعی برابر با ارتفاع content گرفته است و خاصیت stickyاش کار نمی‌کند.
             </figcaption>
           </div>
           <div class="code editor-box">
@@ -715,7 +727,7 @@
             </div>
           </figure>
           <figcaption class="fa">
-            اینجا منوی کناری position: sticky داره و همراه با scroll ما پایین میاد  
+            در این مورد منوی کناری position: sticky دارد و همراه با scroll ما پایین می‌آید.
           </figcaption>
           </div>
         </div>
@@ -729,8 +741,9 @@
             <span class="code presentor">>Alireza</span>
             <span class="code general-title">DEFENSIVE CSS</span>
             <p class="fa description">
-              بعضی وقت‌ها از vendorهایی مثل webkit یا moz استفاده می‌کنیم. در این حالت ممکنه چندتا vendor رو با هم انتخاب کنیم تا استایل مشابه رو بهشون اعمال کنیم. اما این روش کار نمیکنه و ممکنه اصلا بلافاصله متوجه نشید و ساعت‌ها درگیر این موضوع بشید. راه درست اینه که جدا انتخابشون کنیم.
-              <span class="code snippet" dir="ltr">::webkit {} :moz {}</span></p>
+              بعضی وقت‌ها از vendorهایی مثل webkit یا moz استفاده می‌کنیم. در این حالت ممکن است چند vendor را با هم انتخاب کنیم تا استایل مشابه را به آن‌ها اعمال کنیم. اما این روش کار نمی‌کند و ممکن است اصلا بلافاصله متوجه نشوید و ساعت‌ها درگیر این موضوع بشوید. راه درست این است که جدا انتخابشان کنیم.
+              <br>
+              <span class="code snippet" dir="ltr">::webkit {}</span> <span class="code snippet" dir="ltr">:moz {}</span></p>
           </div>
         </header>
         <div class="content">
@@ -751,7 +764,7 @@
             <figure>    
             </figure>
             <figcaption class="fa">
-              استایل color: #222 به هیچ کدوم از selectorها اعمال نمیشه.
+              استایل color: #222 به هیچ کدام از selectorها اعمال نمی‌شود.
             </figcaption>
           </div>
           <div class="code editor-box">
@@ -778,7 +791,7 @@
               
           </figure>
           <figcaption class="fa">
-            اینجا چون جدا selectشون کردیم، استایل مورد نظر ما اعمال میشه.
+            در این مورد چون جدا selectشان کردیم، استایل مورد نظر ما اعمال می‌شود.
           </figcaption>
           </div>
         </div>
@@ -793,9 +806,9 @@
             <span class="code presentor">>Alireza</span>
             <span class="code general-title">DEFENSIVE CSS</span>
             <p class="fa description">
-              ممکنه صفحه‌ای رو خیلی با دقت طراحی کرده باشین و روش کلی وقت گذاشته باشین، ولی یادتون رفته باشه  که scrollbarها هم فضا می‌گیرن و موقعی که محتوا یکم زیاد شده و scrollbarها نشون داده شدن، چیدمان صفحه تون بهم خورده باشه. برای جلوگیری از این مشکل، کد
+              ممکن است صفحه‌ای را با دقت  زیادی طراحی کرده باشید ولی یادتان رفته باشد که scrollbarها هم فضا اشغال می‌کنند و موقعی که محتوا کمی زیاد شد و scrollbarها نشان داده شدند، چیدمان صفحه‌تان به هم خورده باشد. برای جلوگیری از این مشکل، کد<br>
               <span class="code snippet" dir="ltr">scrollbar-gutter: stable;</span>
-              رو به المان مد نظرتون اضافه کنید تا برای scrollbar فضا رزرو کنه.
+              رو به المان مد نظرتون اضافه کنید تا برای scrollbar فضا رزرو کند.
             </p>
           </div>
         </header>
@@ -817,7 +830,7 @@
        
           </figure>
           <figcaption class="fa">
-            با اضافه کردن این یه خط کد، خیالتون راحت میشه که چیدمان صفحه تون قرار نیست به هم بخوره. 
+            با اضافه کردن این یک خط کد، خیالتان راحت است که که چیدمان صفحه‌تان دچار مشکل نمی‌شود. 
           </figcaption>
           </div>
         </div>
@@ -831,9 +844,9 @@
             <span class="code presentor">>Alireza</span>
             <span class="code general-title">DEFENSIVE CSS</span>
             <p class="fa description">
-              باز هم gird! ممکنه حین درست کردن grid بین دو کلیدواژه auto-fill و auto-fit بمونیم و آخرش رندوم یکی رو انتخاب کنیم. ممکنه بعد از چند وقت، چیدمان صفحه‌مون یه سری رفتارهایی از خودش نشون بده که ندونیم از کجا ناشی میشه. مثل المان‌های با عرض خیلی زیاد که میتونه نتیجه انتخاب نادرست ما باشه. به طور کلی اگه از<br>
+               ممکن است در حین ایجاد grid بین دو کلیدواژه auto-fill و auto-fit بمانیم و در آخر شانسی یکی را انتخاب کنیم. ممکن است بعد از چند وقت، چیدمان صفحه‌مان یک سری رفتارهایی از خود نشان بدهد که ندانیم از کجا ناشی می‌شوند. مثل المان‌هایی با عرض خیلی زیاد که می‌تواند نتیجه انتخاب نادرست ما باشد. به طور کلی اگر از<br>
               <span class="code snippet" dir="ltr">repeat(auto-fill, minmax(250px, 1fr));</span><br>
-              استفاده کنیم کمتر چنین مشکلاتی پیش میاد.
+              استفاده کنیم کمتر چنین مشکلاتی پیش می‌آید.
             </p>
           </div>
         </header>
@@ -882,7 +895,7 @@
                 
             </figure>
             <figcaption class="fa">
-              در auto-fit اگر یه المان در کل سطر grid باشه، کل اون فضا رو میگیره و میتونه چیدمان کارت‌‌ها رو به هم بریزه.
+              در auto-fit اگر المانی در کل سطر grid باشد، کل آن فضا را می‌گیرد و می‌تواند چیدمان کارت‌‌ها رو به هم بریزد.
             </figcaption>
           </div>
           <div class="code editor-box">
@@ -929,7 +942,7 @@
                 
             </figure>
             <figcaption class="fa">
-              اما در auto-fill حتی اگر فقط یه المان فرزند در یه سطر وجود داشته باشه، باز هم تمام فضا رو نمیگیره
+              اما در auto-fill حتی اگر فقط یک المان فرزند در یک سطر وجود داشته باشد، باز هم تمام فضا را نمی‌گیرد
             </figcaption>
           </div>
         </div>
@@ -943,9 +956,9 @@
             <span class="code presentor">>Alireza</span>
             <span class="code general-title">DEFENSIVE CSS</span>
             <p class="fa description">
-              ممکنه شما هم تو سایتی صفحه modalای یا inputای که متن و محتواش طولانیه و قابل scrollئه رو دارید میخونید که scroll می‌کنید میرسید آخرش و بعد اون صفحه اصلی شروع به scroll خوردن می‌کنه. این UX بدیه و میتونیم با کد<br>
+              ممکن است شما هم در سایتی صفحه modalای یا inputای که متن و محتوای طولانی‌ای دارد و قابل scrollاست را می‌خوانید که scroll می‌کنید و به آخر می‌رسید و بعد آن صفحه اصلی شروع به scroll کردن می‌کند. این UX بدی می‌باشد و می‌توانیم با کد<br>
               <span class="code snippet" dir="ltr">overscroll-behavior-y: contain;</span><br>
-              این مشکل رو برطرف کنیم.
+              این مشکل را برطرف کنیم.
             </p>
           </div>
         </header>
@@ -974,7 +987,7 @@
                 
             </figure>
             <figcaption class="fa">
-              در این حالت، بعد از اتمام scroll پنجره بالایی، پنجره پایینی شروع به scroll خوردن می‌کنه.
+              در این حالت، بعد از اتمام scroll پنجره بالایی، پنجره پایینی شروع به scroll خوردن می‌کند.
             </figcaption>
           </div>
           <div class="code editor-box">
@@ -1001,7 +1014,7 @@
             </figure>
 
             <figcaption class="fa">
-              در این حالت scroll فقط برای بخشی اعمال می‌شود که نشانگر موس روی اونه.
+              در این حالت scroll فقط برای بخشی اعمال می‌شود که نشانگر موس  بر روی آن می‌باشد.
             </figcaption>
           </div>
         </div>

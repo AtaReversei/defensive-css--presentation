@@ -124,7 +124,7 @@ section header {
   margin: 0 auto;
 
   width: 100%;
-  aspect-ratio: 6 / 2;
+  height: 100vh;
 
   background-image: linear-gradient(
     to left bottom,
@@ -144,7 +144,7 @@ section header {
   background-repeat: no-repeat;
   background-size: auto;
 
-  padding-block: 20rem;
+  padding-block: 3rem;
 }
 
 .brief {
@@ -313,6 +313,45 @@ section header {
     #3ad683,
     #40de84
   );
+}
+
+#section-pre-01 {
+  display: flex;
+  justify-content: center;
+}
+
+#section-pre-02 {
+  position: relative;
+}
+
+.info {
+  position: absolute;
+  top: 37vh;
+  right: 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.css-defensive {
+  color: #096bc1;
+  font-size: 10rem;
+  transform: translateY(45vh);
+}
+
+.p-name {
+  font-size: 10rem;
+  color: #333;
+  position: relative;
+}
+
+.p-name img {
+  position: absolute;
+
+  width: 10rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 5px;
+  right: -12rem;
 }
 
 .section-1__flex-container {
