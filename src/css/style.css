@@ -974,3 +974,200 @@ section header {
   top: 1rem;
   align-self: start;
 }
+
+#section-09 > header {
+  background-image: linear-gradient(
+    to right bottom,
+    #35e379,
+    #0fe592,
+    #00e7a8,
+    #00e8bc,
+    #00e8cd,
+    #00e5d6,
+    #00e2de,
+    #1adfe4,
+    #04d9e7,
+    #00d3e9,
+    #07cdeb,
+    #1bc7eb
+  );
+}
+
+#section-09 .presentor,
+#section-09 .general-title,
+#section-09 .slide-num {
+  color: #fff;
+  opacity: 0.7;
+}
+
+#section-09 .description,
+#section-09 .title {
+  color: #005b6d;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+#section-09 .snippet {
+  background-color: #fff;
+  color: #005b6d;
+}
+
+#section-09 .brief {
+  background-image: radial-gradient(
+      hsla(180, 50%, 40%, 0.4) 0.85px,
+      transparent 0.85px
+    ),
+    radial-gradient(
+      hsla(180, 50%, 40%, 0.4) 0.85px,
+      hsla(180, 50%, 40%, 0) 0.85px
+    );
+}
+
+.webkit {
+  color: #fff;
+  background-image: linear-gradient(
+    to right top,
+    rgb(24, 72, 204),
+    rgb(33, 160, 199)
+  );
+  font-size: 7rem;
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
+  line-height: 1.2;
+}
+.moz {
+  color: #fff;
+  background-image: linear-gradient(
+    to right top,
+    rgb(252, 78, 78),
+    rgb(241, 144, 16)
+  );
+  font-size: 7rem;
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
+  line-height: 1.2;
+}
+
+#section-10 > header {
+  background-image: linear-gradient(
+    to right top,
+    #1bc7eb,
+    #12bee8,
+    #10b6e4,
+    #15ade0,
+    #1da4db,
+    #149cd7,
+    #0f93d3,
+    #118bcf,
+    #0081cb,
+    #0076c7,
+    #096bc1,
+    #1a60bb
+  );
+}
+
+#section-10 .presentor,
+#section-10 .general-title,
+#section-10 .slide-num {
+  color: rgb(16, 69, 138);
+  opacity: 0.7;
+}
+
+#section-10 .description,
+#section-10 .title {
+  color: #fff;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+#section-10 .title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 3rem;
+  height: 20rem;
+  background: repeating-linear-gradient(
+    -45deg,
+    #eeeeee,
+    #eeeeee 2px,
+    rgba(229, 229, 247, 0) 2px,
+    rgba(229, 229, 247, 0) 10px
+  );
+  border: 3px dashed #fff;
+  border-radius: 10px;
+  right: 0rem;
+  top: 7rem;
+}
+
+#section-10 .snippet {
+  background-color: rgb(16, 69, 138);
+}
+
+#section-10 .brief {
+  background-image: radial-gradient(
+      hsla(180, 50%, 40%, 0.6) 0.85px,
+      transparent 0.85px
+    ),
+    radial-gradient(
+      hsla(180, 50%, 40%, 0.6) 0.85px,
+      hsla(180, 50%, 40%, 0) 0.85px
+    );
+}
+
+.transform-left {
+  display: block;
+  transform: translateX(-5rem);
+}
+
+#section-11 > header {
+  background-image: linear-gradient(
+    to right top,
+    #1a60bb,
+    #215dbe,
+    #295ac0,
+    #3257c2,
+    #3b53c3,
+    #3d4fc1,
+    #404abe,
+    #4246bc,
+    #3e41b6,
+    #3a3cb0,
+    #3637aa,
+    #3232a4
+  );
+}
+
+#section-11 .presentor,
+#section-11 .general-title,
+#section-11 .slide-num {
+  color: rgb(255, 161, 250);
+  opacity: 0.7;
+}
+
+#section-11 .description,
+#section-11 .title {
+  color: #fff;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.grid-fill {
+  letter-spacing: 30px;
+  display: inline-block;
+  transform: translate(30px, 10px);
+}
+
+.section-11 .fill {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 1rem;
+}
+
+.section-11 .item {
+  background-image: linear-gradient(to right top, #ddd, #fff);
+  height: 150px;
+}
+
+.fill.right {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}

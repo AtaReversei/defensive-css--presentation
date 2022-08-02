@@ -624,6 +624,221 @@
           </div>
         </div>
       </section>
+
+      <section id="section-09">
+        <header>
+          <div class="brief">
+            <h1 class="en title title-9">WHY MY <span class="webkit">::WEBKIT</span> AND <span class="moz">:MOZ</span> DOESN'T WORK?</h1>
+            <span class="en slide-num">09</span>
+            <span class="code presentor">>Alireza</span>
+            <span class="code general-title">DEFENSIVE CSS</span>
+            <p class="fa description">
+              بعضی وقت‌ها از vendorهایی مثل webkit یا moz استفاده می‌کنیم. در این حالت ممکنه چندتا vendor رو با هم انتخاب کنیم تا استایل مشابه رو بهشون اعمال کنیم. اما این روش کار نمیکنه و ممکنه اصلا بلافاصله متوجه نشید و ساعت‌ها درگیر این موضوع بشید. راه درست اینه که جدا انتخابشون کنیم.
+              <span class="code snippet" dir="ltr"> ::webkit {} :moz {}</span>
+            </p>
+          </div>
+        </header>
+        <div class="content">
+          <div class="code editor-box">
+            <figure>
+              <div class="code editor">
+                <p><span class="tag">input::-webkit-input-placeholder,</span> </p>
+                <p><span class="tag">input:-moz-placeholder</span> {</p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;color: 
+                  <span class="value">#222</span>;
+                </p>
+                <span>}</span>
+              </div>
+            </figure>
+          </div>
+          <div class="code-preview wrong">
+            <figure>    
+            </figure>
+            <figcaption class="fa">
+              استایل color: #222 به هیچ کدوم از selectorها اعمال نمیشه.
+            </figcaption>
+          </div>
+          <div class="code editor-box">
+            <figure>
+              <div class="code editor">
+                <p><span class="tag">input::-webkit-input-placeholder</span> {</p>
+                  <p class="property">
+                    &nbsp;&nbsp;&nbsp;&nbsp;color: 
+                    <span class="value">#222</span>;
+                  </p>
+                  <span>}</span>
+                  <br>
+                  <p><span class="tag">input:-moz-placeholder</span> {</p>
+                    <p class="property">
+                      &nbsp;&nbsp;&nbsp;&nbsp;color: 
+                      <span class="value">#222</span>;
+                    </p>
+                    <span>}</span>
+              </div>
+            </figure>
+          </div>
+          <div class="code-preview right">
+            <figure>
+              
+          </figure>
+          <figcaption class="fa">
+            اینجا چون جدا selectشون کردیم، استایل مورد نظر ما اعمال میشه.
+          </figcaption>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-10">
+        <header>
+          <div class="brief">
+            <h1 class="en title title-10">MIND YOUR <span class="transform-left">SCROLLBAR</span>
+            </h1>
+            <span class="en slide-num">10</span>
+            <span class="code presentor">>Alireza</span>
+            <span class="code general-title">DEFENSIVE CSS</span>
+            <p class="fa description">
+              ممکنه صفحه‌ای رو خیلی با دقت طراحی کرده باشین و روش کلی وقت گذاشته باشین، ولی یادتون رفته باشه  که scrollbarها هم فضا می‌گیرن و موقعی که محتوا یکم زیاد شده و scrollbarها نشون داده شدن، چیدمان صفحه تون بهم خورده باشه. برای جلوگیری از این مشکل، کد
+              <span class="code snippet" dir="ltr">scrollbar-gutter: stable;</span>
+              رو به المان مد نظرتون اضافه کنید تا برای scrollbar فضا رزرو کنه.
+            </p>
+          </div>
+        </header>
+        <div class="content">
+          <div class="code editor-box">
+            <figure>
+              <div class="code editor">
+                <p><span class="tag">.element</span> {</p>
+                  <p class="property">
+                    &nbsp;&nbsp;&nbsp;&nbsp;scrollbar-gutter:
+                    <span class="value">stable</span>;
+                  </p>
+                  <span>}</span>
+              </div>
+            </figure>
+          </div>
+          <div class="code-preview right">
+            <figure>
+       
+          </figure>
+          <figcaption class="fa">
+            با اضافه کردن این یه خط کد، خیالتون راحت میشه که چیدمان صفحه تون قرار نیست به هم بخوره. 
+          </figcaption>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-11">
+        <header>
+          <div class="brief">
+            <h1 class="en title title-11">AUTO-FILL<br>vs.<br><span class="grid-fill">AUTO-FIT</span></h1>
+            <span class="en slide-num">11</span>
+            <span class="code presentor">>Alireza</span>
+            <span class="code general-title">DEFENSIVE CSS</span>
+            <p class="fa description">
+              باز هم gird! ممکنه حین درست کردن grid بین دو کلیدواژه auto-fill و auto-fit بمونیم و آخرش رندوم یکی رو انتخاب کنیم. ممکنه بعد از چند وقت، چیدمان صفحه‌مون یه سری رفتارهایی از خودش نشون بده که ندونیم از کجا ناشی میشه. مثل المان‌های با عرض خیلی زیاد که میتونه نتیجه انتخاب نادرست ما باشه. به طور کلی اگه از<br>
+              <span class="code snippet" dir="ltr">repeat(auto-fit, minmax(250px, 1fr));</span><br>
+              استفاده کنیم کمتر چنین مشکلاتی پیش میاد.
+            </p>
+          </div>
+        </header>
+        <div class="content">
+          <div class="code editor-box">
+            <figure>
+              <div class="code editor">
+                <p><span class="tag">.wrapper</span> {</p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;display:
+                  <span class="value">grid</span>;
+                </p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;grid-template-columns:
+                  <span class="value">repeat(auto-fit, minmax(250px, 1fr))</span>;
+                </p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;grid-gap:
+                  <span class="value">10px</span>;
+                </p>
+                <span>}</span>
+              </div>
+            </figure>
+          </div>
+          <div class="code-preview wrong">
+            <figure class="margin-bottom">
+              <div class="section-11">
+                <div class="fill">
+                  <div class="item"></div>
+                  <div class="item"></div>
+                  <div class="item"></div>
+                  <div class="item"></div>
+                </div>
+              </div>
+                
+                
+            </figure>
+            <figure>
+              <div class="section-11">
+
+                <div class="fill">
+                  <div class="item"></div>
+                </div>
+              </div>
+                
+                
+            </figure>
+            <figcaption class="fa">
+              در auto-fit اگر یه المان در کل سطر grid باشه، کل اون فضا رو میگیره و میتونه چیدمان کارت‌‌ها رو به هم بریزه.
+            </figcaption>
+          </div>
+          <div class="code editor-box">
+            <figure>
+              <div class="code editor">
+                <p><span class="tag">.wrapper</span> {</p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;display:
+                  <span class="value">grid</span>;
+                </p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;grid-template-columns:
+                  <span class="value">repeat(auto-fill, minmax(250px, 1fr))</span>;
+                </p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;grid-gap:
+                  <span class="value">10px</span>;
+                </p>
+                <span>}</span>
+              </div>
+            </figure>
+          </div>
+          <div class="code-preview right">
+            <figure class="margin-bottom">
+              <div class="section-11">
+                <div class="fill right">
+                  <div class="item"></div>
+                  <div class="item"></div>
+                  <div class="item"></div>
+                  <div class="item"></div>
+                </div>
+              </div>
+                
+                
+            </figure>
+            <figure>
+              <div class="section-11">
+
+                <div class="fill right">
+                  <div class="item"></div>
+                </div>
+              </div>
+                
+                
+            </figure>
+            <figcaption class="fa">
+              اما در auto-fill حتی اگر فقط یه المان فرزند در یه سطر وجود داشته باشه، باز هم تمام فضا رو نمیگیره
+            </figcaption>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
   <script src="./js/script.js"></script>
