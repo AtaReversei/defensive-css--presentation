@@ -20,13 +20,13 @@ body {
   width: 100%;
 }
 
-/* main {
+main {
   display: flex;
   flex-direction: row-reverse;
 
   transform: translateX(var(--percentage));
   transition: transform 500ms ease-in;
-} */
+}
 
 section {
   flex: 1 0 100%;
@@ -395,10 +395,22 @@ section header {
   transform: translateZ(-1px) scaleY(4);
 }
 
-.section-2__img-box.wrong,
-.section-2__img-box.wrong img {
+.figure-flex {
+  display: flex;
+  gap: 3rem;
+}
+
+.section-2__img-box-1.wrong,
+.section-2__img-box-1.wrong img {
   width: 30rem;
   height: 30rem;
+  border-radius: 10px;
+}
+
+.section-2__img-box-2.wrong {
+  width: 30rem;
+  height: 30rem;
+  overflow: hidden;
   border-radius: 10px;
 }
 
@@ -499,6 +511,18 @@ section header {
   text-overflow: ellipsis;
 }
 
+.section-3__flex-name {
+  line-height: 1.5;
+  width: 13rem;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.right .section-3__flex-name {
+  overflow-wrap: break-word;
+  min-width: 0;
+}
+
 #section-04 > header {
   background-image: linear-gradient(
     to right bottom,
@@ -575,7 +599,10 @@ section header {
 }
 
 .section-4__image-bg {
-  background-image: linear-gradient(to right top, #ddd, #fff);
+  background-image: var(
+    --gradient-white,
+    linear-gradient(to right top, #ddd, #fff)
+  );
 }
 
 #section-04 .text-on-image {
@@ -769,13 +796,16 @@ section header {
 #section-07 .presentor,
 #section-07 .general-title,
 #section-07 .slide-num {
-  color: #ffee00;
+  color: #ffffff;
   opacity: 0.7;
 }
 
-#section-07 .description,
+#section-07 .description {
+  color: rgb(6, 105, 28);
+}
+
 #section-07 .title {
-  color: #fff;
+  color: rgb(6, 105, 28);
   position: relative;
   transform-style: preserve-3d;
 }
@@ -1170,4 +1200,36 @@ section header {
 
 .fill.right {
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.below-modal {
+  direction: ltr;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  width: 50rem;
+  height: 60rem;
+  font-size: 3rem;
+  padding: 1rem 2rem;
+  overflow-y: auto;
+
+  position: relative;
+}
+.modal {
+  position: absolute;
+  top: 10rem;
+  left: 10rem;
+  display: block;
+  background-image: linear-gradient(to right top, #ddd, #eee);
+  color: #333;
+  overflow-y: auto;
+  width: 30rem;
+  height: 40rem;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.right .modal {
+  overscroll-behavior-y: contain;
 }

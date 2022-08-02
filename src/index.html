@@ -24,13 +24,9 @@
             <span class="code presentor">>Ata!</span>
             <span class="code general-title">DEFENSIVE CSS</span>
             <p class="fa description">
-              تقریبا همه توسعه‌دهندگان css از flex برای پیاده‌سازی چیدمان‌های
-              متفاوت استفاده می‌کنند. اما موقعی که از flex استفاده می‌کنیم، ممکن
-              است عرض المان پدر برای جاگیری همه المان‌های فرزند در یک خط کم
-              باشد. در این صورت المان‌های فرزند از پدر خود بیرون میفتند. برای
-              جلوگیری از این مشکل می‌توان از
+              هر روزه از flex برای پیاده‌سازی انواع چیدمان‌ها استفاده می‌کنیم. اما گاهی اوقات بر اساس نیازهای زمان حال چیدمان رو طراحی می‌کنیم و فکر آینده رو نمی‌کنیم. در flex اگر تعداد فرزندها زیاد بشه ممکنه چیدمانمون بهم بریزه. با کد ساده
               <span class="code snippet" dir="ltr">flex-wrap: wrap;</span>
-              استفاده کرد.
+             میتونیم این مشکل رو حل کنیم.
             </p>
           </div>
         </header>
@@ -103,8 +99,8 @@
             <span class="code general-title">DEFENSIVE CSS</span>
             <p class="fa description">
               عکس‌ها از مهم‌ترین المان‌های هر وب‌سایتی هستند. اما ما کنترلی بر
-              روی همه عکس‌های وب‌سایت و aspect ratio آن‌ها نداریم چون ممکن است
-              از طرف کاربر آپلود شده باشند. راحتترین و بهترین کار قرار دادن
+              روی همه عکس‌های وب‌سایت و aspect ratio اون‌ها نداریم چون ممکن است
+              از طرف کاربر آپلود شده باشند یا back-end ما عکس‌هایی متفاوت نسبت به آنچه در ذهن داشتیم برامون بفرسته. راحتترین و بهترین کار قرار دادن
               <span class="code snippet" dir="ltr">object-fit: cover;</span>
               بر عکس مربوطه است.
             </p>
@@ -124,11 +120,15 @@
             </figure>
           </div>
           <div class="code-preview wrong">
-            <figure>
-              <div class="section-2__img-box wrong">
+            <figure class="figure-flex">
+              <div class="section-2__img-box-1 wrong">
+                <img src="img/01.jpg" />
+              </div>
+              <div class="section-2__img-box-2 wrong">
                 <img src="img/01.jpg" />
               </div>
             </figure>
+            
             <figcaption class="fa">
               عکس aspect-ratio خود را از دست داده و غیر طبیعی دیده می‌شود.
             </figcaption>
@@ -140,6 +140,10 @@
                 <p class="property">
                   &nbsp;&nbsp;&nbsp;&nbsp;object-fit:
                   <span class="value">cover</span>;
+                </p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;max-width:
+                  <span class="value">100%</span>;
                 </p>
                 <span>}</span>
               </div>
@@ -225,10 +229,18 @@
           <div class="code editor-box">
             <figure>
               <div class="code editor">
-                <p><span class="tag">.img</span> {</p>
+                <p><span class="tag">.text</span> {</p>
                 <p class="property">
-                  &nbsp;&nbsp;&nbsp;&nbsp;object-fit:
-                  <span class="value">cover</span>;
+                  &nbsp;&nbsp;&nbsp;&nbsp;white-space:
+                  <span class="value">nowrap</span>;
+                </p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;overflow:
+                  <span class="value">hidden</span>;
+                </p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;text-overflow:
+                  <span class="value">ellipsis</span>;
                 </p>
                 <span>}</span>
               </div>
@@ -260,6 +272,93 @@
             <figcaption class="fa">
               مورد سوم الان جمله رو نمی‌شکنه و ادامه جمله رو نشان نمی‌ده و در
               آخر جمله سه نقطه نشان می‌ده.
+            </figcaption>
+
+          </div>
+          <div class="code editor-box">
+            <figure>
+              <div class="code editor">
+                <p><span class="tag">.text</span> {</p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;overflow-wrap:
+                  <span class="value">break-word</span>;
+                </p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;min-width:
+                  <span class="value">0</span>;
+                </p>
+                <span>}</span>
+              </div>
+            </figure>
+          </div>
+          <div class="code-preview wrong">
+            <figure>
+              <div class="section-3__contact-list wrong">
+                <div class="section-3__contact">
+                  <div class="circle"></div>
+                  <p class="fa section-3__flex-name">امیرعطا فرجی</p>
+                </div>
+                <div class="section-3__contact">
+                  <div class="circle"></div>
+                  <p class="fa section-3__flex-name">علیرضا بینش</p>
+                </div>
+                <div class="section-3__contact">
+                  <div class="circle"></div>
+                  <p class="fa section-3__flex-name">
+                    شرکتکاستار(زیرمجموعهمهیمن)
+                  </p>
+                </div>
+                <div class="section-3__contact">
+                  <div class="circle"></div>
+                  <p class="fa section-3__flex-name">پارسا اروانه</p>
+                </div>
+              </div>
+            </figure>
+            <figcaption class="fa">
+              مورد سوم وقتی به انتهای المان پدرش میرسه، کلمه میشکنه و میره سطر بعدی.
+            </figcaption>
+          </div>
+          <div class="code editor-box">
+            <figure>
+              <div class="code editor">
+                <p><span class="tag">.text</span> {</p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;overflow-wrap:
+                  <span class="value">break-word</span>;
+                </p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;min-width:
+                  <span class="value">0</span>;
+                </p>
+                <span>}</span>
+              </div>
+            </figure>
+          </div>
+          <div class="code-preview right">
+            <figure>
+              <div class="section-3__contact-list right">
+                <div class="section-3__contact">
+                  <div class="circle"></div>
+                  <p class="fa section-3__flex-name">امیرعطا فرجی</p>
+                </div>
+                <div class="section-3__contact">
+                  <div class="circle"></div>
+                  <p class="fa section-3__flex-name">علیرضا بینش</p>
+                </div>
+                <div class="section-3__contact">
+                  <div class="circle"></div>
+                  <p class="fa section-3__flex-name">
+                    شرکتکاستار(زیرمجموعهمهیمن)
+                  </p>
+                </div>
+                <div class="section-3__contact">
+                  <div class="circle"></div>
+                  <p class="fa section-3__flex-name">پارسا اروانه</p>
+                </div>
+              </div>
+            </figure>
+            <figcaption class="fa">
+              مورد سوم وقتی به انتهای المان پدرش میرسه، کلمه میشکنه و میره سطر بعدی.
             </figcaption>
           </div>
         </div>
@@ -320,7 +419,7 @@
                 <p><span class="tag">.img</span> {</p>
                 <p class="property">
                   &nbsp;&nbsp;&nbsp;&nbsp;background-color:
-                  <span class="value">#fff</span>;
+                  <span class="value">var(--gradient-white, #fff)</span>;
                 </p>
                 <span>}</span>
               </div>
@@ -346,14 +445,11 @@
             <span class="code presentor">>Ata!</span>
             <span class="code general-title">DEFENSIVE CSS</span>
             <p class="fa description">
-              بعضی وقت‌ها ممکنه نوشته‌ای روی عکس قرار بدیم و کلی هم حال کنیم.
-              همه چی اوکیه ولی اگه عکس load نشه و رنگ نوشته‌تون با رنگ پس زمینه
-              نزدیک باشه یا خدای نکرده هم‌رنگ باشه، اون موقع متن رو نمیشه خوند.
-              میتونیم با ساده‌ترین کد یک خطی جهان، یعنی
+              مشکلی توی مرورگر safari گوشی‌ها وجود داره و اونم این مورده که وقتی روی inputای میزنیم تا اطلاعاتمون رو وارد کنیم، صفحه زوم میشه تا اون inputئه در مرکز توجه کاربر باشه. تا اینجا که خوبه ولی مشکل از جایی شروع میشه که نمیتونیم به عقب زوم کنیم. با اعمال سایز فونت ثابت 
               <span class="code snippet" dir="ltr"
-                >background-color: white;</span
+                >font-size: 16px;</span
               >
-              این مشکل رو حل کنیم.
+              این مشکل رو می‌تونیم حل کنیم.
             </p>
           </div>
         </header>
@@ -418,7 +514,7 @@
               این فعال کردن خوب نیست بلکه میتونه به کاربر تجربه بدی بده. ما
               میتونیم با
               <span class="code snippet" dir="ltr"
-                >@mdia (hover: hover){ // code }</span
+                >@media (hover: hover){ // code }</span
               >
               این مشکل رو برطرف کنیم.
             </p>
@@ -634,8 +730,7 @@
             <span class="code general-title">DEFENSIVE CSS</span>
             <p class="fa description">
               بعضی وقت‌ها از vendorهایی مثل webkit یا moz استفاده می‌کنیم. در این حالت ممکنه چندتا vendor رو با هم انتخاب کنیم تا استایل مشابه رو بهشون اعمال کنیم. اما این روش کار نمیکنه و ممکنه اصلا بلافاصله متوجه نشید و ساعت‌ها درگیر این موضوع بشید. راه درست اینه که جدا انتخابشون کنیم.
-              <span class="code snippet" dir="ltr"> ::webkit {} :moz {}</span>
-            </p>
+              <span class="code snippet" dir="ltr">::webkit {} :moz {}</span></p>
           </div>
         </header>
         <div class="content">
@@ -737,7 +832,7 @@
             <span class="code general-title">DEFENSIVE CSS</span>
             <p class="fa description">
               باز هم gird! ممکنه حین درست کردن grid بین دو کلیدواژه auto-fill و auto-fit بمونیم و آخرش رندوم یکی رو انتخاب کنیم. ممکنه بعد از چند وقت، چیدمان صفحه‌مون یه سری رفتارهایی از خودش نشون بده که ندونیم از کجا ناشی میشه. مثل المان‌های با عرض خیلی زیاد که میتونه نتیجه انتخاب نادرست ما باشه. به طور کلی اگه از<br>
-              <span class="code snippet" dir="ltr">repeat(auto-fit, minmax(250px, 1fr));</span><br>
+              <span class="code snippet" dir="ltr">repeat(auto-fill, minmax(250px, 1fr));</span><br>
               استفاده کنیم کمتر چنین مشکلاتی پیش میاد.
             </p>
           </div>
@@ -835,6 +930,78 @@
             </figure>
             <figcaption class="fa">
               اما در auto-fill حتی اگر فقط یه المان فرزند در یه سطر وجود داشته باشه، باز هم تمام فضا رو نمیگیره
+            </figcaption>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-12">
+        <header>
+          <div class="brief">
+            <h1 class="en title title-12">SCROLL!<br> DON'T SCROLL!</h1>
+            <span class="en slide-num">12</span>
+            <span class="code presentor">>Alireza</span>
+            <span class="code general-title">DEFENSIVE CSS</span>
+            <p class="fa description">
+              ممکنه شما هم تو سایتی صفحه modalای یا inputای که متن و محتواش طولانیه و قابل scrollئه رو دارید میخونید که scroll می‌کنید میرسید آخرش و بعد اون صفحه اصلی شروع به scroll خوردن می‌کنه. این UX بدیه و میتونیم با کد<br>
+              <span class="code snippet" dir="ltr">overscroll-behavior-y: contain;</span><br>
+              این مشکل رو برطرف کنیم.
+            </p>
+          </div>
+        </header>
+        <div class="content">
+          <div class="code editor-box">
+            <figure>
+              <div class="code editor">
+                <p><span class="tag">.modal</span> {</p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <span class="comment">// emptiness</span>;
+                </p>
+                <span>}</span>
+              </div>
+            </figure>
+          </div>
+          <div class="code-preview wrong">
+            <figure>
+              <div class="below-modal en">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae nihil doloribus ratione non, voluptatem quos veritatis cum, praesentium illo unde fugiat officiis vitae nisi omnis, odit excepturi corrupti quasi iste minima ullam fuga eos quidem ex molestias! Dolore, temporibus illum assumenda aliquam, laudantium architecto reiciendis nesciunt quia expedita deserunt veniam. Id unde soluta tempore commodi molestiae mollitia inventore culpa quod in. Ipsa, esse, veniam dolorum placeat incidunt odio ex nam tempore, temporibus totam id explicabo fuga sunt sapiente hic veritatis. Voluptates ipsa dolores ullam perspiciatis nemo nesciunt ipsum est assumenda eius neque numquam voluptas ut natus, impedit illo quaerat maxime cum perferendis recusandae aut optio dolore fuga. Inventore doloremque animi voluptatibus itaque, tenetur ex sunt libero ducimus molestias voluptate cum. Id, tempore quos impedit nesciunt voluptate magni quasi dolore cum et culpa, ipsum in repellendus soluta quibusdam dolores illum. Dignissimos dolore est, sint earum repellendus explicabo rem nisi facilis dolor.<br>
+                 Odit sequi accusamus deleniti! Ab sit tenetur iusto? Quibusdam eligendi sed pariatur sapiente iure. Facilis iste maxime harum laboriosam, explicabo magni! Quasi iste pariatur, porro fugiat animi harum, nemo illum sint repellendus quidem beatae sequi. A, magnam alias.
+                <div class="modal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quisquam neque quibusdam dolorem facere rerum veritatis? Dignissimos omnis optio quod, porro nihil alias, sapiente dolorem quas corrupti laboriosam minus at. Omnis temporibus deserunt impedit autem commodi officiis sed quos illo, quod nobis id iste, provident facere cupiditate. Expedita quod cupiditate ad incidunt unde vel alias a, sit corrupti. Quisquam quaerat reiciendis quas quam illum error! Ratione, sit unde!</div>
+              </div>
+              
+                
+                
+            </figure>
+            <figcaption class="fa">
+              در این حالت، بعد از اتمام scroll پنجره بالایی، پنجره پایینی شروع به scroll خوردن می‌کنه.
+            </figcaption>
+          </div>
+          <div class="code editor-box">
+            <figure>
+              <div class="code editor">
+                <p><span class="tag">.modal</span> {</p>
+                <p class="property">
+                  &nbsp;&nbsp;&nbsp;&nbsp;overscroll-behavior-y:
+                  <span class="value">contain</span>;
+                </p>
+                <span>}</span>
+              </div>
+            </figure>
+          </div>
+          <div class="code-preview right">
+            <figure class="margin-bottom">
+              <div class="below-modal en">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae nihil doloribus ratione non, voluptatem quos veritatis cum, praesentium illo unde fugiat officiis vitae nisi omnis, odit excepturi corrupti quasi iste minima ullam fuga eos quidem ex molestias! Dolore, temporibus illum assumenda aliquam, laudantium architecto reiciendis nesciunt quia expedita deserunt veniam. Id unde soluta tempore commodi molestiae mollitia inventore culpa quod in. Ipsa, esse, veniam dolorum placeat incidunt odio ex nam tempore, temporibus totam id explicabo fuga sunt sapiente hic veritatis. Voluptates ipsa dolores ullam perspiciatis nemo nesciunt ipsum est assumenda eius neque numquam voluptas ut natus, impedit illo quaerat maxime cum perferendis recusandae aut optio dolore fuga. Inventore doloremque animi voluptatibus itaque, tenetur ex sunt libero ducimus molestias voluptate cum. Id, tempore quos impedit nesciunt voluptate magni quasi dolore cum et culpa, ipsum in repellendus soluta quibusdam dolores illum. Dignissimos dolore est, sint earum repellendus explicabo rem nisi facilis dolor.<br>
+                 Odit sequi accusamus deleniti! Ab sit tenetur iusto? Quibusdam eligendi sed pariatur sapiente iure. Facilis iste maxime harum laboriosam, explicabo magni! Quasi iste pariatur, porro fugiat animi harum, nemo illum sint repellendus quidem beatae sequi. A, magnam alias.
+                <div class="modal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quisquam neque quibusdam dolorem facere rerum veritatis? Dignissimos omnis optio quod, porro nihil alias, sapiente dolorem quas corrupti laboriosam minus at. Omnis temporibus deserunt impedit autem commodi officiis sed quos illo, quod nobis id iste, provident facere cupiditate. Expedita quod cupiditate ad incidunt unde vel alias a, sit corrupti. Quisquam quaerat reiciendis quas quam illum error! Ratione, sit unde!</div>
+              </div>
+                
+                
+            </figure>
+
+            <figcaption class="fa">
+              در این حالت scroll فقط برای بخشی اعمال می‌شود که نشانگر موس روی اونه.
             </figcaption>
           </div>
         </div>

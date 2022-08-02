@@ -4,6 +4,9 @@ const slide_num = document.querySelectorAll("section");
 let index = 0;
 
 root.addEventListener("keydown", (e) => {
+  if (e.key === "/") {
+    window.scrollTo(0, 0);
+  }
   if (e.key === "ArrowLeft" && index > 0 && window.pageYOffset === 0) {
     index -= 1;
     root.style.setProperty("--percentage", index * -100 + "%");
