@@ -1188,6 +1188,32 @@ section header {
   transform: translateX(-5rem);
 }
 
+.section-10__felx-container {
+  display: flex;
+  gap: 4rem;
+}
+
+.text-box {
+  direction: ltr;
+  color: #fff;
+
+  font-size: 2rem;
+  border-radius: 10px;
+  width: 25rem;
+  height: 15rem;
+  border: 3px solid #fff;
+  padding: 1rem 2rem;
+}
+
+.scroll-nogutter {
+  overflow-y: auto;
+}
+
+.scroll-gutter {
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+
 #section-11 > header {
   background-image: linear-gradient(
     to right top,
